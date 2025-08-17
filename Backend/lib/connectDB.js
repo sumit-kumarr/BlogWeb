@@ -12,7 +12,7 @@ dotenv.config({ path: envPath });
 
 const connectDB = async () => {
     try {
-        const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/blogweb";
+        const uri = process.env.MONGO_URI;
         console.log('MongoDB URI:', uri);
         
         await mongoose.connect(uri, {
